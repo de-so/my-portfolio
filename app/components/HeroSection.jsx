@@ -36,7 +36,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6'>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat qui adipisci veritatis vitae quo laborum itaque, quam repellendus enim! Adipisci nam aperiam provident ipsam similique itaque ullam veniam quisquam sequi.
+          &ldquo;Hi, I am sharing you some links to show off! <br />Just kidding, I&apos;m really working hard to improve. Check my <Link href={"https://leetcode.com/u/souvik_2024/"} className='sm:text-secondary-500'>leetcode</Link> profile. It&apos;s not so unique, but I learned so many things there. <br />Umm, you can swipe up, I dont have anymore opening speech :)&rdquo;
           </p>
           <div>
             <Link href={"#contact"} className='rounded-full w-full sm:w-fit px-6 py-3 mr-4 gradient-color'>Hire Me</Link>
@@ -62,13 +62,19 @@ const HeroSection = () => {
         >
 
           <div className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[400px]lg:h-[400px] relative">
-            <Image
-              src='/images/hero-image4.png'
-              alt='hero image'
-              className='rounded-b-md absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 '
-              width={500}
-              height={500}
-            />
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: [0, 20, 0] }} // Animation sequence: move up, move down, return to original position
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}// Adjust duration and easing as needed
+            >
+              <Image
+                src='/images/hero-image4.png'
+                alt='hero image'
+                className='rounded-b-md absolute transform -translate-x-1/2  top-1/2 left-1/2 '
+                width={500}
+                height={500}
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
