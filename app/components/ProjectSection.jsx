@@ -28,18 +28,18 @@ const PROJECTS_DATA = [
         title: "Fake News Detector",
         description: "ML - DJANGO",
         image: "/images/projects/3.png",
-        tag: ["All", "Web", "Mobile"],
+        tag: ["All", "Web"],
         gitUrl: "/",
         previewUrl: "/",
     },
     {
         id: 4,
-        title: "Amazon Clone",
-        description: "(Copy-Paste): Ignore this one ;)",
+        title: "Study Strike - A Technical Blog",
+        description: "BLOGGER - XML - HTML - CSS - JS",
         image: "/images/projects/4.png",
-        tag: ["All", "Web"],
-        gitUrl: "https://github.com/de-so",
-        previewUrl: "https://amazon-deso.netlify.app/",
+        tag: ["All", "Web", "Mobile"],
+        gitUrl: "https://www.blogger.com/profile/04581203082383257542",
+        previewUrl: "https://study-strike.blogspot.com/",
     },
     {
         id: 5,
@@ -52,12 +52,12 @@ const PROJECTS_DATA = [
     },
     {
         id: 6,
-        title: "Project 6",
-        description: "Project 6 Description",
+        title: "A.C. Magazine - Online Publisher",
+        description: "BLOGGER - XML - HTML - CSS - JS",
         image: "/images/projects/6.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["All", "Web", "Mobile"],
+        gitUrl: "https://www.blogger.com/profile/04581203082383257542",
+        previewUrl: "https://alik-chetona-magazine.blogspot.com/",
     },
 ];
 
@@ -79,7 +79,7 @@ const ProjectSection = () => {
 
     return (
         <section id='projects' className='pt-20'>
-            <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>My Projects</h2>
+            <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>Projects and Blogs</h2>
             <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
                 <ProjectTag
                     onClick={handleTagChange}
