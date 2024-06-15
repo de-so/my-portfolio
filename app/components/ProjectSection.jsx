@@ -29,8 +29,8 @@ const PROJECTS_DATA = [
         description: "ML - DJANGO",
         image: "/images/projects/3.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
+        gitUrl: "https://github.com/de-so/Fake-News-Detection-Using-Machine-Learning",
+        previewUrl: "",
     },
     {
         id: 4,
@@ -114,7 +114,7 @@ const ProjectSection = () => {
                             imgUrl={project.image}
                             tags={project.tag}
                             gitUrl={project.gitUrl}
-                            previewUrl={project.previewUrl}
+                            previewUrl= {project.previewUrl}
                         />
                     </motion.li>
                 ))}
