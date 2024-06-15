@@ -2,19 +2,26 @@
 import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <ul className='list-disc pl-2'>
-        <li>Python</li>
-        <li>Next.js</li>
-        <li>Symfony</li>
-        <li>AI-ML</li>
-        <li>Kotlin</li>
-      </ul>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}>
+        <ul className='list-disc pl-2'>
+          <li>Python</li>
+          <li>Next.js</li>
+          <li>Django</li>
+          <li>AI-ML</li>
+          <li>Kotlin</li>
+        </ul>
+      </motion.div>
     ),
   },
   {
@@ -50,6 +57,7 @@ const AboutSection = () => {
   };
   return (
     <section id='about' className='text-white pt-8'>
+      <hr className=''/>
       <div className='md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 sm:mx-0 xl:px-16 md:min-h-screen'>
         <Image className='lg:mt-0 md:mt-0 sm:mt-0 rounded-md' src="/images/about-image.png" alt='about-image' priority={true} width={450} height={450} />
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
@@ -64,7 +72,22 @@ const AboutSection = () => {
             <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"} children={"Education"} />
             <TabButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"} children={"Certifications"} /> */}
           </div>
-          <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
+          <div className="mt-8">
+            <AnimatePresence mode='wait'>
+            {TAB_DATA.filter((t) => t.id === tab).map((t) => (
+            <motion.div
+              key={t.id}
+              initial={{ opacity: 0, x: -25 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -25 }}
+              transition={{ duration: 0.3 }}
+            >
+              {t.content}
+            </motion.div>
+          ))}
+            {/* {TAB_DATA.find((t) => t.id === tab).content} */}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section >

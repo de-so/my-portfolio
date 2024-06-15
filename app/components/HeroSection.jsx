@@ -36,7 +36,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6'>
-          &ldquo;Hi, I am sharing you some links to show off! <br />Just kidding, I&apos;m really working hard to improve. Check my <Link href={"https://leetcode.com/u/souvik_2024/"} className='sm:text-secondary-500'>leetcode</Link> profile. It&apos;s not so unique, but I learned so many things there. <br />Umm, you can swipe up, I dont have anymore opening speech :)&rdquo;
+          &ldquo;Hi, I am sharing you some links to show off! <br />Just kidding, I&apos;m really working hard to improve. Check my <Link href={"https://leetcode.com/u/souvik_2024/"} className='text-secondary-500'>leetcode</Link> profile. It&apos;s not so unique, but I learned so many things there. <br />Umm, you can swipe up, I dont have anymore opening speech :)&rdquo;
           </p>
           <div>
             <Link href={"#contact"} className='rounded-full w-full sm:w-fit px-6 py-3 mr-4 gradient-color'>Hire Me</Link>

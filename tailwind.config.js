@@ -20,6 +20,9 @@ module.exports = {
       primary: colors.indigo,
       secondary: colors.sky,
     },
+    features: {
+      borderGradient: true,
+    },
   },
   plugins: [],
 };
