@@ -44,8 +44,8 @@ const HeroSection = () => {
               className='rounded-full w-full sm:w-fit px-1 py-1  bg-gradient-to-br from-secondary-300 via-primary-500 to-purple-800 mt-3 border border-white'
             >
               <Link
-                href={"/doc/Resume.pdf"}
-                download={"Souvik_D_cv.pdf"}
+                href={"/doc/Resume.txt"}
+                download={"Souvik_D_cv.txt"}
                 target="_blank" >
                 <span className='transition duration-300 block text-neutral-100 bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download Resume</span>
               </Link>
